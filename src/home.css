@@ -1,0 +1,293 @@
+/* =========================
+   Main Header
+========================= */
+
+.the-header {
+    min-height: 100vh;
+    padding: 28px clamp(20px, 6vw, 90px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(37, 99, 235, 0.18),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(14, 165, 233, 0.12),
+            transparent 30%
+        ),
+        #f8fafc;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+.H3 {
+    align-self: flex-start;
+
+    margin: 5px 0;
+
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 750;
+
+    color: #0f172a;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease,
+                color 0.25s ease;
+}
+
+.H3:hover {
+    transform: translateY(-2px);
+    color: #2563eb;
+}
+
+
+/* =========================
+   Hero Content
+========================= */
+
+.container-div {
+    width: min(100%, 850px);
+
+    margin-top: clamp(80px, 15vh, 150px);
+
+    text-align: center;
+
+    animation: fadeUp 0.7s ease forwards;
+}
+
+
+.container-div h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    color: #0f172a;
+}
+
+
+/* Highlight the important part of the heading */
+
+.container-div h1::first-letter {
+    color: #2563eb;
+}
+
+
+.container-div h2 {
+    max-width: 650px;
+
+    margin: 24px auto 0;
+
+    font-size: clamp(15px, 1.5vw, 18px);
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   Search Box
+========================= */
+
+.input-div {
+    width: min(100%, 750px);
+
+    margin-top: 50px;
+
+    padding: 10px;
+
+    display: flex;
+
+    gap: 10px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.10),
+        0 4px 12px rgba(15, 23, 42, 0.05);
+
+    backdrop-filter: blur(14px);
+
+    animation: fadeUp 0.8s ease 0.15s both;
+}
+
+
+/* =========================
+   Inputs
+========================= */
+
+.input-div input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 54px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    color: #0f172a;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.input-div input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* Hover */
+
+.input-div input:hover {
+    border-color: #93c5fd;
+
+    transform: translateY(-1px);
+}
+
+
+/* Focus */
+
+.input-div input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.12);
+
+    transform: translateY(-1px);
+}
+
+
+/* Date input */
+
+.input-div input[type="date"] {
+    color: #475569;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   Smooth Animation
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 700px) {
+
+    .the-header {
+        padding: 24px;
+    }
+
+    .container-div {
+        margin-top: 90px;
+    }
+
+    .input-div {
+        flex-direction: column;
+
+        padding: 12px;
+
+        border-radius: 15px;
+    }
+
+    .input-div input {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 400px) {
+
+    .the-header {
+        padding: 20px;
+    }
+
+    .container-div {
+        margin-top: 70px;
+    }
+
+    .container-div h1 {
+        letter-spacing: -1px;
+    }
+
+    .container-div h2 {
+        margin-top: 18px;
+        color: rgb(183, 37, 37);
+
+        line-height: 1.5;
+    }
+
+    .input-div {
+        margin-top: 35px;
+    }
+}
+/* =========================
+   Vehicle Container
+========================= */
+

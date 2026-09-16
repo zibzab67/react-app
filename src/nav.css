@@ -1,0 +1,129 @@
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: clamp(20px, 4vw, 45px);
+
+    padding: 14px 22px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(226, 232, 240, 0.8);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================
+   Navigation Links
+========================= */
+
+.navbar a {
+    position: relative;
+
+    padding: 8px 4px;
+
+    color: #475569;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.navbar a:hover {
+    color: #2563eb;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Animated Underline
+========================= */
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
+}
+
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        justify-content: center;
+
+        gap: clamp(15px, 6vw, 30px);
+
+        padding: 12px 16px;
+
+        border-radius: 12px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   Very Small Screens
+========================= */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+}
